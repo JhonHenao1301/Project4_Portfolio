@@ -1,0 +1,223 @@
+
+body {
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+.main_container #title {
+    color: #cefe1a;
+    text-align: center;
+}
+
+/* ----- Navbar ------ */
+.container-fluid .navbar{
+    padding: 0 50px;
+}
+
+.container-fluid .navbar .nav-links a {
+    margin: 0 20px;
+    font-size: 18px;
+    color: azure
+}
+
+.container-fluid .navbar .nav-links a:hover {
+    font-size: 20px;
+    color: white;
+}
+
+/* ------ Home ------ */
+.main_container .home_container {
+    min-height: 80vh;
+}
+
+.main_container .home_container .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.main_container .home_background {
+    background-color: rgba(0, 0, 0, .5);
+    background-attachment: fixed;
+    background-image: url('/assets/home.jpg');
+    background-size: cover;
+    background-position:bottom;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.main_container .home_container i {
+    font-size: 40px;
+    margin: 0 10px;
+    color: white;
+}
+
+.main_container .home_container .home_img img {
+    width: 40%;
+}
+
+.main_container .home_container .home-title {
+    color: #cefe1a;
+    font-size: 40px;
+}
+
+/* ----- Profile  -------- */
+
+.main_container .profile_container .row {
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px;
+}
+
+.main_container .profile_container .profile_info button {
+    background-color: #cefe1a;
+    font-weight: 500;
+}
+
+.main_container .profile_container .profile_images {
+    display: grid;
+    gap: 20px;
+}
+
+.main_container .profile_container .profile_images .skill_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 50px;
+}
+
+.main_container .profile_container .profile_images .skill_item {
+    text-align: center;
+}
+
+/* ----- Experience ----- */
+.main_container .experience_container .row {
+    justify-content: center;
+    margin: 0 40px;
+    color: black;
+}
+
+.main_container .experience_container .row .card{
+    margin: 0 auto;
+}
+
+/* ----- Projects ----- */
+.project_container {
+    margin: 0 10px;
+}
+
+.project_container .project_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.project_container .project_grid .card {
+    max-width: 400px;
+    max-height: 300px;
+    padding: 6rem 5rem;
+    position: relative;
+    display: flex;
+    transition: 0.5s ease-in-out;
+    margin: 10px auto;
+}
+
+.project_container .project_grid .card:hover {
+    transform: translateY(20px);
+}
+
+.project_container .project_grid .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,55,0.7), rgba(206,254,26,0.9));
+    z-index: 2;
+    transition: 0.8s all;
+    opacity: 0;
+}
+
+.project_container .project_grid .card:hover:before {
+    opacity: 1;
+}
+
+.project_container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project_container .project_grid .card button a {
+    color: black;
+    font-size: 13px;
+}
+
+.project_container .card .project_description {
+    z-index: 3;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: 0.5s all;
+    color: aliceblue;
+    text-align: center;
+}
+
+.project_container .card .project_description:hover {
+    opacity: 1;
+}
+
+/* ----- Contact ----- */
+
+.main_container .contact_container {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.main_container .contact_container form .form-group {
+    margin: 10px 0;
+}
+
+.main_container .contact_container form button {
+    background-color: #cefe1a;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1024px) {
+    .project_container .project_grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1023px){
+
+    .main_container .home_container .row {
+        margin: 0 100px;
+    }
+    
+    .main_container .home_container .row .home_img img {
+        width: 60%;
+    }
+
+    .project_container .project_grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    /* For mobile phones: */
+    body {
+      width: 100%;
+    }
+
+    .main_container .navbar{
+        padding: 0;
+    }
+}
