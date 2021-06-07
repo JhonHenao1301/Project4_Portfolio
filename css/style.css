@@ -217,7 +217,13 @@ body {
       width: 100%;
     }
 
-    .main_container .navbar{
-        padding: 0;
+    .container-fluid .navbar{
+        padding: 0 10px;
     }
+
+    .main_container .contact_container {
+        margin: 0 auto;
+        width: 80%;
+    }
+
 }
