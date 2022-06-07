@@ -100,6 +100,7 @@ body {
 
 .main_container .experience_container .row .card{
     margin: 0 auto;
+    height: 10rem;
 }
 
 /* ----- Projects ----- */
@@ -115,8 +116,8 @@ body {
 }
 
 .project_container .project_grid .card {
-    max-width: 400px;
-    max-height: 300px;
+    width: 20rem;
+    height: 24rem;
     padding: 6rem 5rem;
     position: relative;
     display: flex;
