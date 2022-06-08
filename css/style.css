@@ -100,7 +100,7 @@ body {
 
 .main_container .experience_container .row .card{
     margin: 0 auto;
-    height: 10rem;
+    height: 8rem;
 }
 
 /* ----- Projects ----- */
@@ -111,14 +111,14 @@ body {
 .project_container .project_grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 4px;
     margin: 0 auto;
 }
 
 .project_container .project_grid .card {
     width: 20rem;
     height: 24rem;
-    padding: 6rem 5rem;
+    padding: 6rem 4rem;
     position: relative;
     display: flex;
     transition: 0.5s ease-in-out;
@@ -193,7 +193,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
     .project_container .project_grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .main_container .contact_container {
